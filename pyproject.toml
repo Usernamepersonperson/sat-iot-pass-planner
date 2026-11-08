@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sat-iot-pass-planner"
+version = "0.1.0"
+description = "Open-source pass planner for direct-to-satellite IoT uplinks from alpine sites: SGP4 passes, swisstopo terrain horizon masks, link budget, latency, battery budget, device schedule."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.26", "sgp4>=2.23", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5", "skyfield>=1.48"]
+fetch = ["requests>=2.31"]
+
+[project.scripts]
+sat-iot-planner = "sat_iot_pass_planner.cli:main"
+
+[tool.setuptools]
+packages = ["sat_iot_pass_planner"]
+
+[tool.setuptools.package-data]
+sat_iot_pass_planner = ["data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:asyncio"
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008"]

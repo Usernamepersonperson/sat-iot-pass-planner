@@ -1,0 +1,27 @@
+{
+  "interlaken_valley": {
+    "label": "Interlaken, open valley floor",
+    "kind": "valley floor (open)",
+    "lat": 46.6863, "lon": 7.8632
+  },
+  "lauterbrunnen_valley": {
+    "label": "Lauterbrunnen, narrow valley floor",
+    "kind": "valley floor (deep, narrow)",
+    "lat": 46.5936, "lon": 7.9086
+  },
+  "eiger_north_face_base": {
+    "label": "Foot of the Eiger north face",
+    "kind": "north face base",
+    "lat": 46.6000, "lon": 8.0050
+  },
+  "kleine_scheidegg_saddle": {
+    "label": "Kleine Scheidegg, mountain saddle",
+    "kind": "saddle",
+    "lat": 46.5855, "lon": 7.9618
+  },
+  "schilthorn_ridge": {
+    "label": "Schilthorn, ridge top",
+    "kind": "ridge top",
+    "lat": 46.5572, "lon": 7.8353
+  }
+}
