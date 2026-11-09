@@ -64,8 +64,8 @@ Usable means: above the geometric horizon, link margin at least the design margi
 
 ## Data sources
 
-- Orbital elements: CelesTrak GP data (celestrak.org), group `active`, fetched 2026-11-08, object names removed, filtered to three orbit classes. Stored in `sat_iot_pass_planner/data/`.
-- Terrain: swisstopo swissALTI3D height profile service (Source: swisstopo, open government data). Horizons in `sat_iot_pass_planner/data/horizons.json`, rebuild with `fetch-terrain`.
+- Orbital elements: CelesTrak GP data (celestrak.org), group `active`, fetched 2026-11-08, object names removed, filtered to three orbit classes. Stored in `sat_iot_pass_planner/data/`. Licence: none stated. CelesTrak publishes the data for free use but its usage policy (checked 2026-11-09) gives only rate limits, no redistribution terms, so the redistribution status of this snapshot is unverified.
+- Terrain: swisstopo swissALTI3D height profile service (Source: swisstopo; opendata.swiss "Open use, must provide the source"). Horizons in `sat_iot_pass_planner/data/horizons.json`, rebuild with `fetch-terrain`.
 - Validation: the SGP4 verification set (Vallado, Crawford, Hujsak, Kelso, AIAA 2006-6753) shipped inside the `sgp4` package, and Vallado example 3-5 for sidereal time. Max position difference 1.7e-7 km over 710 reference states.
 
 ## What is not verified yet
