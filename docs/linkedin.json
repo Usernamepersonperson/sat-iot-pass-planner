@@ -1,13 +1,31 @@
 {
-  "claim": "Terrain can halve the satellite passes an alpine IoT sensor gets, even with the same sky.",
+  "claim": "Simulated: terrain can halve the satellite passes an alpine IoT sensor gets, same sky.",
   "data_label": "simulated: public orbital elements + swisstopo terrain",
   "stats": [
-    ["85 vs 45", "usable passes/day, ridge vs valley", "accent"],
-    ["48 %", "of valley passes lost to terrain", "amber"],
-    ["8.5 vs 2.8", "battery years, planned vs blind", "green"]
+    [
+      "85 vs 45",
+      "usable passes/day, ridge vs valley",
+      "accent"
+    ],
+    [
+      "48 %",
+      "of valley passes lost to terrain",
+      "amber"
+    ],
+    [
+      "8.5 vs 2.8",
+      "battery years, planned vs blind",
+      "green"
+    ]
   ],
   "limit": "Link budget and device numbers are assumptions; nothing here was measured in the field.",
   "alt": "Two polar sky plots with satellite tracks over 24 hours. In a narrow valley most tracks are red, hidden behind terrain, giving 44.6 usable passes per day; on a ridge top almost all are green, giving 85.1.",
-  "hashtags": ["#IoT", "#Satellite", "#LPWAN", "#OpenSource", "#Switzerland"],
+  "hashtags": [
+    "#IoT",
+    "#Satellite",
+    "#LPWAN",
+    "#OpenSource",
+    "#Switzerland"
+  ],
   "post": "A satellite IoT sensor in the Alps does not see the sky a datasheet assumes.\n\nI built an open-source pass planner to put numbers on that. It propagates public orbital elements with SGP4, builds a 360 degree horizon from the swisstopo 2 m height model, applies a simple 868 MHz link budget, and then works out contact windows, message latency and battery use.\n\nSame 24 satellites, same link, five Bernese Oberland sites (simulated over 7 days):\n- Ridge top: 85.1 usable passes per day, none lost to terrain.\n- Narrow valley floor: 44.6 usable passes per day, 48% lost to terrain.\n- Improving the satellite receiver by 8 dB lifts the ridge from 53 to 112 passes per day, but the valley only from 42 to 45. Terrain, not the link, is the limit.\n- Waking only for predicted windows instead of repeating every 15 minutes cut energy from 1.74 to 0.58 mAh/day in the valley model, and delivery went from 73% to 100%.\n\nWhat is not verified: the link budget, reception probability and current draw are typical assumptions, not field data. The SGP4 and sidereal time code does match the published verification set to micrometres.\n\nIf you deploy sensors in mountains, how much of your uplink planning accounts for the horizon?\n\nCode: https://github.com/Usernamepersonperson/sat-iot-pass-planner"
 }
