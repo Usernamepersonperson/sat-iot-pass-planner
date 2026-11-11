@@ -1,5 +1,5 @@
 import gzip
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 import pytest
 
@@ -105,6 +105,12 @@ def test_select_set_drops_old_epochs():
     assert [t.norad for t in T.select_set(tles, "sso", 5, max_epoch_age_days=2.0)] == [1]
 
 
+def test_select_set_ignores_forward_dated_epochs_outside_the_class():
+    leo = [_make(1, 98.0, 15.1, "26315.50000000"), _make(2, 98.0, 15.1, "26314.90000000")]
+    high = _make(3, 63.0, 2.0, "26319.50000000")  # high orbit, epoch 4 days later
+    assert [t.norad for t in T.select_set([*leo, high], "sso", 5, max_epoch_age_days=2.0)] == [1, 2]
+
+
 def test_select_set_unknown_class_and_empty_input():
     with pytest.raises(KeyError):
         T.select_set([_make(1, 98.0, 15.1)], "geo", 3)
@@ -119,16 +125,95 @@ def test_anonymise_removes_names():
 def test_snapshot_roundtrip(tmp_path):
     p = tmp_path / "snap.tle.gz"
     T.save_snapshot([T.Tle(5, L1, L2)], "test", "x", p)
+    assert T.meta_path(p).name == "snap.meta.json"
     tles, meta = T.load_snapshot(p)
     assert tles == [T.Tle(5, L1, L2)] and meta["count"] == 1
     with gzip.open(p, "rt") as f:
         assert f.read().startswith("SAT 5")
 
 
-def test_committed_snapshot_has_no_object_names_and_is_dated():
-    tles, meta = T.load_snapshot()
-    assert len(tles) > 50
-    with gzip.open(T.DATA_DIR / "tle_snapshot.tle.gz", "rt") as f:
-        names = [ln for i, ln in enumerate(f.read().splitlines()) if i % 3 == 0]
-    assert all(n.startswith("SAT ") for n in names)
-    assert datetime.fromisoformat(meta["newest_epoch_utc"].replace("Z", "+00:00")) > datetime(2026, 1, 1, tzinfo=UTC)
+def test_no_orbit_data_ships_with_the_package():
+    shipped = [p.name for p in T.DATA_DIR.iterdir()]
+    assert not [n for n in shipped if ".tle" in n or "omm" in n.lower() or n.startswith("tle_")]
+
+
+class _Resp:
+    def __init__(self, text):
+        self.text = text
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+    def read(self):
+        return self.text.encode()
+
+
+def _stub(text, calls):
+    def opener(req, timeout):
+        calls.append(req)
+        return _Resp(text)
+
+    return opener
+
+
+def test_fetch_sends_project_user_agent_and_no_email():
+    calls = []
+    T.fetch_celestrak("active", opener=_stub("x", calls))
+    ua = calls[0].get_header("User-agent")
+    assert ua == T.USER_AGENT and "sat-iot-pass-planner" in ua and "@" not in ua
+    assert calls[0].full_url == T.CELESTRAK_URL.format(group="active")
+
+
+def test_fetch_rejects_odd_group_names():
+    with pytest.raises(ValueError):
+        T.fetch_celestrak("active&FORMAT=json", opener=_stub("", []))
+
+
+def test_fetch_to_cache_writes_name_free_dated_snapshot(tmp_path):
+    calls = []
+    path, n = T.fetch_to_cache("active", tmp_path, opener=_stub(f"SOME OBJECT NAME\n{L1}\n{L2}\n", calls))
+    assert n == 1 and len(calls) == 1 and path == tmp_path / "tle_active.tle.gz"
+    with gzip.open(path, "rt") as f:
+        assert f.read().splitlines()[0] == "SAT 5"
+    tles, meta = T.load_snapshot(path)
+    assert tles == [T.Tle(5, L1, L2)] and meta["group"] == "active" and meta["fetched_utc"].endswith("Z")
+
+
+def test_fetch_to_cache_is_polite_within_two_hours(tmp_path):
+    calls = []
+    text = f"{L1}\n{L2}\n"
+    T.fetch_to_cache("active", tmp_path, opener=_stub(text, calls))
+    _, n = T.fetch_to_cache("active", tmp_path, opener=_stub(text, calls))
+    assert n == 0 and len(calls) == 1
+    later = datetime.now(UTC) + timedelta(hours=2, minutes=1)
+    _, n = T.fetch_to_cache("active", tmp_path, opener=_stub(text, calls), now=later)
+    assert n == 1 and len(calls) == 2
+
+
+def test_fetch_to_cache_refuses_a_rate_limit_message(tmp_path):
+    with pytest.raises(T.FetchRefused):
+        T.fetch_to_cache("active", tmp_path, opener=_stub("GP data has not updated since your last download", []))
+    assert not (tmp_path / "tle_active.tle.gz").exists()
+
+
+def test_load_cached_downloads_once_on_first_use(tmp_path):
+    calls = []
+    tles, _ = T.load_cached("active", tmp_path, opener=_stub(f"{L1}\n{L2}\n", calls))
+    tles2, _ = T.load_cached("active", tmp_path, opener=_stub("", calls))
+    assert tles == tles2 == [T.Tle(5, L1, L2)] and len(calls) == 1
+
+
+def test_load_cached_without_fetch_raises(tmp_path):
+    with pytest.raises(FileNotFoundError):
+        T.load_cached("active", tmp_path, auto_fetch=False)
+
+
+def test_cache_dir_env_and_override(tmp_path, monkeypatch):
+    monkeypatch.setenv(T.CACHE_ENV, str(tmp_path / "env"))
+    assert T.cache_dir() == tmp_path / "env"
+    assert T.cache_dir(tmp_path / "x") == tmp_path / "x"
+    monkeypatch.delenv(T.CACHE_ENV)
+    assert T.cache_dir().name == "cache"

@@ -1,14 +1,30 @@
+import socket
+
 import pytest
 
 from sat_iot_pass_planner.analysis import build_sets, default_start
 from sat_iot_pass_planner.link import LinkParams
 from sat_iot_pass_planner.passes import compute_visibility, load_sites
-from sat_iot_pass_planner.tle import load_snapshot
+from sat_iot_pass_planner.synthetic import load_synthetic
+
+
+@pytest.fixture(scope="session", autouse=True)
+def no_network(tmp_path_factory):
+    """Tests never download: any socket connect fails, and the cache points at an empty directory."""
+
+    def refuse(*_a, **_k):
+        raise AssertionError("tests must not use the network")
+
+    with pytest.MonkeyPatch.context() as mp:
+        mp.setattr(socket.socket, "connect", refuse)
+        mp.setenv("SAT_IOT_CACHE_DIR", str(tmp_path_factory.mktemp("empty_cache")))
+        yield
 
 
 @pytest.fixture(scope="session")
 def snapshot():
-    return load_snapshot()[0]
+    """Synthetic element sets (made-up orbits, valid TLE layout and checksums)."""
+    return load_synthetic()[0]
 
 
 @pytest.fixture(scope="session")

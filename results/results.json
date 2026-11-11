@@ -1,5 +1,5 @@
 {
- "start_utc": "2026-11-08T08:00:00Z",
+ "start_utc": "2026-11-11T15:00:00Z",
  "days": 7.0,
  "generation_days": 5.0,
  "link": {
@@ -37,65 +37,65 @@
    "count": 24,
    "norad": [
     28810,
-    52746,
-    53229,
-    53494,
-    53691,
-    56193,
-    63179,
-    63353,
-    64950,
-    65398,
-    67583,
-    67714,
-    67797,
-    68221,
-    68391,
-    68437,
-    68748,
-    68790,
-    68901,
-    69020,
-    69212,
-    69336,
-    69433,
-    69690
+    52771,
+    53232,
+    53498,
+    54227,
+    56318,
+    63225,
+    63987,
+    65064,
+    65441,
+    67597,
+    67728,
+    67808,
+    68295,
+    68402,
+    68449,
+    68767,
+    68806,
+    68914,
+    69032,
+    69224,
+    69348,
+    69482,
+    69705
    ],
-   "mean_altitude_km": 481.2,
-   "min_link_elevation_deg": 9.753474152306836,
+   "mean_altitude_km": 482.6,
+   "min_link_elevation_deg": 9.803224013340744,
    "max_doppler_khz": 22.1
   },
   "mid": {
    "label": "mid-inclination class (inc 45-60 deg, 450-650 km)",
    "count": 24,
    "norad": [
-    47356,
-    48119,
-    52367,
-    52659,
-    52706,
-    53002,
-    53180,
-    58941,
-    59391,
-    60258,
-    60412,
-    62764,
-    63726,
-    64116,
-    65692,
-    65952,
-    66186,
-    66257,
-    68085,
-    68090,
-    68291,
-    68559,
-    69365,
-    69534
+    47379,
+    48359,
+    52483,
+    52785,
+    52865,
+    53145,
+    53289,
+    59011,
+    59959,
+    60314,
+    60594,
+    62859,
+    64117,
+    64213,
+    65754,
+    66030,
+    66231,
+    66304,
+    68239,
+    68244,
+    68526,
+    68706,
+    69510,
+    69769
    ],
-   "mean_altitude_km": 480.7,
-   "min_link_elevation_deg": 9.753474152306836,
+   "mean_altitude_km": 477.0,
+   "min_link_elevation_deg": 9.653974430239021,
    "max_doppler_khz": 22.1
   },
   "polar": {
@@ -104,31 +104,31 @@
    "norad": [
     5398,
     39451,
-    41923,
     41925,
     42803,
+    42809,
     42957,
     42961,
     43072,
-    43480,
+    43076,
     43481,
-    43928,
-    43931,
+    43571,
+    43572,
     49113,
-    56729,
-    61552,
-    61554,
-    61567,
-    62243,
-    68360,
-    68370,
-    68374,
-    68375,
-    68414,
-    69814
+    56727,
+    56728,
+    61561,
+    62240,
+    63918,
+    63920,
+    68365,
+    68366,
+    68369,
+    68372,
+    68375
    ],
-   "mean_altitude_km": 722.5,
-   "min_link_elevation_deg": 17.11645358532518,
+   "mean_altitude_km": 713.9,
+   "min_link_elevation_deg": 16.817954419121733,
    "max_doppler_khz": 21.7
   }
  },
@@ -141,76 +141,76 @@
     "sso": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1204.095238095238,
-       "coverage_minutes_per_day": 811.0,
-       "passes_per_day": 137.0
+       "sat_minutes_per_day": 1218.7142857142858,
+       "coverage_minutes_per_day": 832.8333333333333,
+       "passes_per_day": 139.28571428571428
       },
       "link_flat": {
-       "sat_minutes_per_day": 482.33333333333337,
-       "coverage_minutes_per_day": 404.4761904761905,
-       "passes_per_day": 85.28571428571429
+       "sat_minutes_per_day": 484.7142857142857,
+       "coverage_minutes_per_day": 415.4761904761905,
+       "passes_per_day": 86.42857142857143
       },
       "link_terrain": {
-       "sat_minutes_per_day": 350.0238095238095,
-       "coverage_minutes_per_day": 307.3095238095238,
-       "passes_per_day": 84.28571428571429
+       "sat_minutes_per_day": 351.2142857142857,
+       "coverage_minutes_per_day": 318.57142857142856,
+       "passes_per_day": 85.85714285714286
       },
-      "passes_lost_to_terrain_pct": 1.1725293132328285
+      "passes_lost_to_terrain_pct": 0.6611570247933907
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 13.947158923160654,
-       "uplink_p95_min": 64.50448844313227,
-       "e2e_p50_min": 53.502453095014545,
-       "e2e_p95_min": 128.67684822646928,
-       "tx_mah_per_day": 0.32266666666666666,
-       "wake_mah_per_day": 0.155,
+       "uplink_p50_min": 12.321402083518235,
+       "uplink_p95_min": 57.80553800226991,
+       "e2e_p50_min": 50.60098789558045,
+       "e2e_p95_min": 113.64127993652284,
+       "tx_mah_per_day": 0.368,
+       "wake_mah_per_day": 0.16499999999999998,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6696666666666666,
-       "battery_years": 7.364121726204681,
+       "total_mah_per_day": 0.725,
+       "battery_years": 6.8020784128483704,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.9673333333333334,
-       "uplink_p50_min": 69.21922914941193,
-       "uplink_p95_min": 240.45141771631504,
-       "e2e_p50_min": 107.56098591623983,
-       "e2e_p95_min": 286.71995751987816,
-       "tx_mah_per_day": 0.8880000000000001,
-       "wake_mah_per_day": 0.5549999999999999,
+       "delivery_ratio": 0.976,
+       "uplink_p50_min": 64.28274764565298,
+       "uplink_p95_min": 284.2826433825954,
+       "e2e_p50_min": 99.78488287222802,
+       "e2e_p95_min": 315.3549274943741,
+       "tx_mah_per_day": 0.8559999999999999,
+       "wake_mah_per_day": 0.5349999999999999,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.6350000000000002,
-       "battery_years": 3.016212140253864,
+       "total_mah_per_day": 1.5829999999999997,
+       "battery_years": 3.1152917557265125,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 13.98622597666205,
-       "uplink_p95_min": 59.41320094067689,
-       "e2e_p50_min": 53.09537839923287,
-       "e2e_p95_min": 129.68277647742082,
-       "tx_mah_per_day": 0.36533333333333334,
-       "wake_mah_per_day": 0.16166666666666668,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 14.1208724871353,
+       "uplink_p95_min": 57.73253207320453,
+       "e2e_p50_min": 50.95393046529731,
+       "e2e_p95_min": 115.04684724225052,
+       "tx_mah_per_day": 0.3546666666666667,
+       "wake_mah_per_day": 0.16,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.719,
-       "battery_years": 6.858841236877703,
+       "total_mah_per_day": 0.7066666666666667,
+       "battery_years": 6.978547428276041,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 53.84243948582516,
-       "uplink_p95_min": 231.2617373645516,
-       "e2e_p50_min": 95.89782775545537,
-       "e2e_p95_min": 264.91793951110697,
-       "tx_mah_per_day": 0.696,
-       "wake_mah_per_day": 0.43499999999999994,
+       "delivery_ratio": 0.996,
+       "uplink_p50_min": 48.288682388948594,
+       "uplink_p95_min": 243.61032111669383,
+       "e2e_p50_min": 85.36520146862676,
+       "e2e_p95_min": 290.1013775182701,
+       "tx_mah_per_day": 0.72,
+       "wake_mah_per_day": 0.45,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.323,
-       "battery_years": 3.7275184046221232,
+       "total_mah_per_day": 1.3619999999999999,
+       "battery_years": 3.6207832961197273,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -218,76 +218,76 @@
     "mid": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1693.4761904761906,
-       "coverage_minutes_per_day": 962.7857142857143,
-       "passes_per_day": 162.85714285714286
+       "sat_minutes_per_day": 1676.6666666666665,
+       "coverage_minutes_per_day": 1003.2142857142857,
+       "passes_per_day": 162.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 894.5238095238095,
-       "coverage_minutes_per_day": 654.3809523809524,
-       "passes_per_day": 135.14285714285714
+       "sat_minutes_per_day": 883.952380952381,
+       "coverage_minutes_per_day": 668.8809523809524,
+       "passes_per_day": 133.28571428571428
       },
       "link_terrain": {
-       "sat_minutes_per_day": 745.3809523809524,
-       "coverage_minutes_per_day": 578.7142857142857,
-       "passes_per_day": 131.0
+       "sat_minutes_per_day": 739.1190476190476,
+       "coverage_minutes_per_day": 582.8095238095237,
+       "passes_per_day": 130.14285714285714
       },
-      "passes_lost_to_terrain_pct": 3.0655391120507414
+      "passes_lost_to_terrain_pct": 2.357984994640938
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 10.061492797701188,
-       "uplink_p95_min": 38.61628533562518,
-       "e2e_p50_min": 63.728812357562006,
-       "e2e_p95_min": 248.58848990636574,
-       "tx_mah_per_day": 0.4,
-       "wake_mah_per_day": 0.175,
+       "uplink_p50_min": 9.473239010211547,
+       "uplink_p95_min": 37.50339050176157,
+       "e2e_p50_min": 57.106116532085,
+       "e2e_p95_min": 242.84522671645556,
+       "tx_mah_per_day": 0.3973333333333333,
+       "wake_mah_per_day": 0.17333333333333334,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.767,
-       "battery_years": 6.42960475790752,
+       "total_mah_per_day": 0.7626666666666667,
+       "battery_years": 6.466136603122904,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 31.669864986988735,
-       "uplink_p95_min": 131.15613083823197,
-       "e2e_p50_min": 91.49394503229172,
-       "e2e_p95_min": 274.6771734388197,
-       "tx_mah_per_day": 0.6186666666666667,
-       "wake_mah_per_day": 0.38666666666666666,
+       "uplink_p50_min": 34.50692248727634,
+       "uplink_p95_min": 165.20942741371246,
+       "e2e_p50_min": 81.29983795740833,
+       "e2e_p95_min": 262.6828816101355,
+       "tx_mah_per_day": 0.616,
+       "wake_mah_per_day": 0.385,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.1973333333333334,
-       "battery_years": 4.118741800652897,
+       "total_mah_per_day": 1.193,
+       "battery_years": 4.133702304539034,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 11.472308469342412,
-       "uplink_p95_min": 40.7767175548181,
-       "e2e_p50_min": 66.10133894883438,
-       "e2e_p95_min": 255.68852951487418,
-       "tx_mah_per_day": 0.4053333333333334,
-       "wake_mah_per_day": 0.17833333333333334,
+       "uplink_p50_min": 10.469906480256517,
+       "uplink_p95_min": 37.81350612974445,
+       "e2e_p50_min": 58.794477222736596,
+       "e2e_p95_min": 245.50752480638363,
+       "tx_mah_per_day": 0.38666666666666666,
+       "wake_mah_per_day": 0.17166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7756666666666667,
-       "battery_years": 6.357765598601291,
+       "total_mah_per_day": 0.7503333333333333,
+       "battery_years": 6.572421389580278,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 30.45713409671201,
-       "uplink_p95_min": 115.45049507843287,
-       "e2e_p50_min": 110.20397501144568,
-       "e2e_p95_min": 273.8108043627489,
-       "tx_mah_per_day": 0.576,
-       "wake_mah_per_day": 0.36,
+       "uplink_p50_min": 28.64872225934305,
+       "uplink_p95_min": 98.53691323551648,
+       "e2e_p50_min": 81.28511963265628,
+       "e2e_p95_min": 249.72948131498586,
+       "tx_mah_per_day": 0.5146666666666666,
+       "wake_mah_per_day": 0.32166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.128,
-       "battery_years": 4.371903235208395,
+       "total_mah_per_day": 1.0283333333333333,
+       "battery_years": 4.795630647632157,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -295,76 +295,76 @@
     "polar": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1755.2380952380952,
-       "coverage_minutes_per_day": 1017.952380952381,
-       "passes_per_day": 153.85714285714286
+       "sat_minutes_per_day": 1734.7619047619048,
+       "coverage_minutes_per_day": 992.047619047619,
+       "passes_per_day": 152.85714285714286
       },
       "link_flat": {
-       "sat_minutes_per_day": 458.2857142857143,
-       "coverage_minutes_per_day": 389.0952380952381,
-       "passes_per_day": 77.85714285714286
+       "sat_minutes_per_day": 462.7142857142857,
+       "coverage_minutes_per_day": 377.73809523809524,
+       "passes_per_day": 78.0
       },
       "link_terrain": {
-       "sat_minutes_per_day": 405.11904761904765,
-       "coverage_minutes_per_day": 351.64285714285717,
-       "passes_per_day": 77.85714285714286
+       "sat_minutes_per_day": 407.38095238095235,
+       "coverage_minutes_per_day": 340.66666666666663,
+       "passes_per_day": 78.0
       },
       "passes_lost_to_terrain_pct": 0.0
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 14.776549392909267,
-       "uplink_p95_min": 56.62838700074007,
-       "e2e_p50_min": 32.300337065533434,
-       "e2e_p95_min": 116.71315339228923,
-       "tx_mah_per_day": 0.32,
-       "wake_mah_per_day": 0.14833333333333334,
+       "delivery_ratio": 0.9993333333333333,
+       "uplink_p50_min": 15.005854614343358,
+       "uplink_p95_min": 53.06101891288657,
+       "e2e_p50_min": 29.136026646010276,
+       "e2e_p95_min": 101.89039895123874,
+       "tx_mah_per_day": 0.33333333333333337,
+       "wake_mah_per_day": 0.15333333333333335,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6603333333333333,
-       "battery_years": 7.468208252370119,
+       "total_mah_per_day": 0.6786666666666668,
+       "battery_years": 7.26646392335226,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.9946666666666667,
-       "uplink_p50_min": 69.34365080174685,
-       "uplink_p95_min": 234.0775636622714,
-       "e2e_p50_min": 106.26154938993132,
-       "e2e_p95_min": 279.723218180681,
-       "tx_mah_per_day": 0.768,
-       "wake_mah_per_day": 0.48,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 60.41249191002474,
+       "uplink_p95_min": 203.1627927536184,
+       "e2e_p50_min": 97.42521044989626,
+       "e2e_p95_min": 226.01509429401054,
+       "tx_mah_per_day": 0.8426666666666666,
+       "wake_mah_per_day": 0.5266666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.44,
-       "battery_years": 3.4246575342465753,
+       "total_mah_per_day": 1.5613333333333332,
+       "battery_years": 3.1585227472128965,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 14.934941896242284,
-       "uplink_p95_min": 61.41489198351419,
-       "e2e_p50_min": 26.071737935659257,
-       "e2e_p95_min": 118.03026160398447,
-       "tx_mah_per_day": 0.3466666666666667,
-       "wake_mah_per_day": 0.15833333333333333,
+       "uplink_p50_min": 14.964296377386685,
+       "uplink_p95_min": 55.769467520877456,
+       "e2e_p50_min": 25.257694876716293,
+       "e2e_p95_min": 101.91607797361534,
+       "tx_mah_per_day": 0.33333333333333337,
+       "wake_mah_per_day": 0.15333333333333335,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.697,
-       "battery_years": 7.0753326389025375,
+       "total_mah_per_day": 0.6786666666666668,
+       "battery_years": 7.26646392335226,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 56.41693705754127,
-       "uplink_p95_min": 208.12201194456324,
-       "e2e_p50_min": 90.61211494246054,
-       "e2e_p95_min": 242.9188246965115,
-       "tx_mah_per_day": 0.768,
-       "wake_mah_per_day": 0.48,
+       "uplink_p50_min": 51.267299014226474,
+       "uplink_p95_min": 197.2439813420055,
+       "e2e_p50_min": 89.24682734359618,
+       "e2e_p95_min": 226.8535018453377,
+       "tx_mah_per_day": 0.7413333333333332,
+       "wake_mah_per_day": 0.4633333333333334,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.44,
-       "battery_years": 3.4246575342465753,
+       "total_mah_per_day": 1.3966666666666667,
+       "battery_years": 3.530911825285252,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -379,76 +379,76 @@
     "sso": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1201.7142857142858,
-       "coverage_minutes_per_day": 810.047619047619,
-       "passes_per_day": 137.28571428571428
+       "sat_minutes_per_day": 1215.0238095238094,
+       "coverage_minutes_per_day": 831.3333333333333,
+       "passes_per_day": 139.28571428571428
       },
       "link_flat": {
-       "sat_minutes_per_day": 481.42857142857144,
-       "coverage_minutes_per_day": 403.64285714285717,
-       "passes_per_day": 85.0
+       "sat_minutes_per_day": 483.5952380952381,
+       "coverage_minutes_per_day": 414.5238095238095,
+       "passes_per_day": 86.28571428571429
       },
       "link_terrain": {
-       "sat_minutes_per_day": 189.30952380952382,
-       "coverage_minutes_per_day": 173.80952380952382,
-       "passes_per_day": 44.57142857142857
+       "sat_minutes_per_day": 192.52380952380955,
+       "coverage_minutes_per_day": 178.78571428571428,
+       "passes_per_day": 46.0
       },
-      "passes_lost_to_terrain_pct": 47.56302521008403
+      "passes_lost_to_terrain_pct": 46.68874172185431
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
-       "delivery_ratio": 0.9986666666666667,
-       "uplink_p50_min": 24.882902643305957,
-       "uplink_p95_min": 120.04470650321018,
-       "e2e_p50_min": 73.41922617394908,
-       "e2e_p95_min": 192.69243677747616,
-       "tx_mah_per_day": 0.26666666666666666,
-       "wake_mah_per_day": 0.12333333333333334,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 23.718762522286852,
+       "uplink_p95_min": 116.56537383977101,
+       "e2e_p50_min": 63.13372678779124,
+       "e2e_p95_min": 162.05101379889192,
+       "tx_mah_per_day": 0.296,
+       "wake_mah_per_day": 0.14333333333333334,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.5820000000000001,
-       "battery_years": 8.473379466177093,
+       "total_mah_per_day": 0.6313333333333333,
+       "battery_years": 7.811256889094619,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.726,
-       "uplink_p50_min": 108.66226420903574,
-       "uplink_p95_min": 317.87797738638426,
-       "e2e_p50_min": 137.94405557847156,
-       "e2e_p95_min": 358.9491890410463,
-       "tx_mah_per_day": 0.9546666666666667,
-       "wake_mah_per_day": 0.5966666666666667,
+       "delivery_ratio": 0.8506666666666667,
+       "uplink_p50_min": 97.42294879624218,
+       "uplink_p95_min": 304.6482125455032,
+       "e2e_p50_min": 123.99844845563105,
+       "e2e_p95_min": 309.7699757171518,
+       "tx_mah_per_day": 0.9973333333333333,
+       "wake_mah_per_day": 0.6233333333333333,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.7433333333333334,
-       "battery_years": 2.828780219492391,
+       "total_mah_per_day": 1.8126666666666664,
+       "battery_years": 2.7205811967534403,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 14.06468455868162,
-       "uplink_p95_min": 61.0202850940177,
-       "e2e_p50_min": 53.09537839923287,
-       "e2e_p95_min": 130.82955929340474,
-       "tx_mah_per_day": 0.36533333333333334,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 14.04027249206374,
+       "uplink_p95_min": 61.46001512252265,
+       "e2e_p50_min": 51.04662856221766,
+       "e2e_p95_min": 114.4768101586702,
+       "tx_mah_per_day": 0.3546666666666667,
        "wake_mah_per_day": 0.16,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7173333333333334,
-       "battery_years": 6.87477720629424,
+       "total_mah_per_day": 0.7066666666666667,
+       "battery_years": 6.978547428276041,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 52.02646957347312,
-       "uplink_p95_min": 231.2617373645516,
-       "e2e_p50_min": 94.6068608089392,
-       "e2e_p95_min": 264.91793951110697,
-       "tx_mah_per_day": 0.7066666666666667,
-       "wake_mah_per_day": 0.4416666666666667,
+       "delivery_ratio": 0.996,
+       "uplink_p50_min": 48.288682388948594,
+       "uplink_p95_min": 243.61032111669383,
+       "e2e_p50_min": 85.36520146862676,
+       "e2e_p95_min": 290.1013775182701,
+       "tx_mah_per_day": 0.7226666666666667,
+       "wake_mah_per_day": 0.45166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.3403333333333334,
-       "battery_years": 3.679313739852078,
+       "total_mah_per_day": 1.3663333333333332,
+       "battery_years": 3.6092999629044176,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -456,30 +456,30 @@
     "mid": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1693.8809523809523,
-       "coverage_minutes_per_day": 962.7619047619047,
-       "passes_per_day": 162.85714285714286
+       "sat_minutes_per_day": 1678.1190476190477,
+       "coverage_minutes_per_day": 1003.8095238095239,
+       "passes_per_day": 162.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 895.3571428571429,
-       "coverage_minutes_per_day": 654.7380952380953,
-       "passes_per_day": 135.28571428571428
+       "sat_minutes_per_day": 884.5714285714286,
+       "coverage_minutes_per_day": 669.1190476190476,
+       "passes_per_day": 133.28571428571428
       },
       "link_terrain": {
-       "sat_minutes_per_day": 364.38095238095235,
-       "coverage_minutes_per_day": 319.85714285714283,
-       "passes_per_day": 114.0
+       "sat_minutes_per_day": 356.38095238095235,
+       "coverage_minutes_per_day": 315.07142857142856,
+       "passes_per_day": 112.85714285714286
       },
-      "passes_lost_to_terrain_pct": 15.733896515311507
+      "passes_lost_to_terrain_pct": 15.326902465166125
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 10.195559027359923,
-       "uplink_p95_min": 39.10406805766037,
-       "e2e_p50_min": 58.19198566273711,
-       "e2e_p95_min": 255.0647399714732,
+       "uplink_p50_min": 9.227713788845433,
+       "uplink_p95_min": 41.15563544197953,
+       "e2e_p50_min": 56.415570461728684,
+       "e2e_p95_min": 252.69615447113952,
        "tx_mah_per_day": 0.4026666666666666,
        "wake_mah_per_day": 0.18,
        "sleep_mah_per_day": 0.192,
@@ -488,44 +488,44 @@
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.9633333333333334,
-       "uplink_p50_min": 61.17731043849101,
-       "uplink_p95_min": 255.2762316400929,
-       "e2e_p50_min": 170.00906296521,
-       "e2e_p95_min": 398.3242759170949,
-       "tx_mah_per_day": 0.8213333333333332,
-       "wake_mah_per_day": 0.5133333333333334,
+       "delivery_ratio": 0.9726666666666667,
+       "uplink_p50_min": 70.23072734483382,
+       "uplink_p95_min": 268.9989384808426,
+       "e2e_p50_min": 159.37291663060313,
+       "e2e_p95_min": 376.5586630033711,
+       "tx_mah_per_day": 0.7866666666666666,
+       "wake_mah_per_day": 0.4916666666666667,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.5266666666666668,
-       "battery_years": 3.230244661123407,
+       "total_mah_per_day": 1.4703333333333333,
+       "battery_years": 3.354006018577467,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 11.492666684730406,
-       "uplink_p95_min": 40.614445504126216,
-       "e2e_p50_min": 66.05040816616263,
-       "e2e_p95_min": 253.95086643643123,
-       "tx_mah_per_day": 0.4053333333333334,
-       "wake_mah_per_day": 0.17833333333333334,
+       "uplink_p50_min": 10.480195172365832,
+       "uplink_p95_min": 38.32842770491102,
+       "e2e_p50_min": 58.95794024847252,
+       "e2e_p95_min": 245.95339449059531,
+       "tx_mah_per_day": 0.38666666666666666,
+       "wake_mah_per_day": 0.17166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7756666666666667,
-       "battery_years": 6.357765598601291,
+       "total_mah_per_day": 0.7503333333333333,
+       "battery_years": 6.572421389580278,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 30.45713409671201,
-       "uplink_p95_min": 115.45049507843287,
-       "e2e_p50_min": 110.20397501144568,
-       "e2e_p95_min": 273.8108043627489,
-       "tx_mah_per_day": 0.576,
-       "wake_mah_per_day": 0.36,
+       "uplink_p50_min": 28.31849086918713,
+       "uplink_p95_min": 106.3474009316797,
+       "e2e_p50_min": 82.9074846051842,
+       "e2e_p95_min": 269.49041994446617,
+       "tx_mah_per_day": 0.5146666666666666,
+       "wake_mah_per_day": 0.32166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.128,
-       "battery_years": 4.371903235208395,
+       "total_mah_per_day": 1.0283333333333333,
+       "battery_years": 4.795630647632157,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -533,76 +533,76 @@
     "polar": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1751.547619047619,
-       "coverage_minutes_per_day": 1016.3333333333333,
-       "passes_per_day": 153.85714285714286
+       "sat_minutes_per_day": 1730.8095238095236,
+       "coverage_minutes_per_day": 990.8095238095239,
+       "passes_per_day": 152.28571428571428
       },
       "link_flat": {
-       "sat_minutes_per_day": 457.23809523809524,
-       "coverage_minutes_per_day": 388.07142857142856,
-       "passes_per_day": 77.42857142857143
+       "sat_minutes_per_day": 461.57142857142856,
+       "coverage_minutes_per_day": 376.8095238095238,
+       "passes_per_day": 78.0
       },
       "link_terrain": {
-       "sat_minutes_per_day": 293.9047619047619,
-       "coverage_minutes_per_day": 260.4761904761905,
-       "passes_per_day": 57.142857142857146
+       "sat_minutes_per_day": 292.92857142857144,
+       "coverage_minutes_per_day": 249.83333333333331,
+       "passes_per_day": 57.0
       },
-      "passes_lost_to_terrain_pct": 26.199261992619927
+      "passes_lost_to_terrain_pct": 26.923076923076927
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 19.44517764201719,
-       "uplink_p95_min": 66.8451224630774,
-       "e2e_p50_min": 27.554680077298144,
-       "e2e_p95_min": 107.94323914089752,
-       "tx_mah_per_day": 0.312,
-       "wake_mah_per_day": 0.145,
+       "uplink_p50_min": 18.6353309222685,
+       "uplink_p95_min": 67.67884193935555,
+       "e2e_p50_min": 26.317883967711047,
+       "e2e_p95_min": 97.70764376184064,
+       "tx_mah_per_day": 0.32,
+       "wake_mah_per_day": 0.14666666666666667,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.649,
-       "battery_years": 7.598623804799797,
+       "total_mah_per_day": 0.6586666666666667,
+       "battery_years": 7.487105540458099,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.918,
-       "uplink_p50_min": 80.75266832602016,
-       "uplink_p95_min": 307.48092696432957,
-       "e2e_p50_min": 122.11791575234771,
-       "e2e_p95_min": 371.9370990027301,
-       "tx_mah_per_day": 0.8320000000000001,
-       "wake_mah_per_day": 0.52,
+       "delivery_ratio": 0.97,
+       "uplink_p50_min": 82.50066336309246,
+       "uplink_p95_min": 272.01414449099553,
+       "e2e_p50_min": 115.63387826172693,
+       "e2e_p95_min": 323.7982729331561,
+       "tx_mah_per_day": 0.8586666666666666,
+       "wake_mah_per_day": 0.5366666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.544,
-       "battery_years": 3.1939811200227126,
+       "total_mah_per_day": 1.5873333333333333,
+       "battery_years": 3.1067871793249067,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 15.033589721941826,
-       "uplink_p95_min": 59.88267839885363,
-       "e2e_p50_min": 25.134090845447645,
-       "e2e_p95_min": 109.60120682151178,
-       "tx_mah_per_day": 0.3466666666666667,
-       "wake_mah_per_day": 0.15833333333333333,
+       "uplink_p50_min": 14.91245660878473,
+       "uplink_p95_min": 53.71043935779932,
+       "e2e_p50_min": 25.172218408414242,
+       "e2e_p95_min": 98.09860336438454,
+       "tx_mah_per_day": 0.33333333333333337,
+       "wake_mah_per_day": 0.15333333333333335,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.697,
-       "battery_years": 7.0753326389025375,
+       "total_mah_per_day": 0.6786666666666668,
+       "battery_years": 7.26646392335226,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 54.900373825288504,
-       "uplink_p95_min": 236.51687017385206,
-       "e2e_p50_min": 101.77676753263901,
-       "e2e_p95_min": 291.48063239361335,
-       "tx_mah_per_day": 0.7626666666666667,
-       "wake_mah_per_day": 0.4766666666666667,
+       "uplink_p50_min": 51.267299014226474,
+       "uplink_p95_min": 197.2439813420055,
+       "e2e_p50_min": 89.24682734359618,
+       "e2e_p95_min": 226.8535018453377,
+       "tx_mah_per_day": 0.728,
+       "wake_mah_per_day": 0.45499999999999996,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.4313333333333333,
-       "battery_years": 3.4453937000338155,
+       "total_mah_per_day": 1.375,
+       "battery_years": 3.586550435865504,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -617,76 +617,76 @@
     "sso": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1200.047619047619,
-       "coverage_minutes_per_day": 809.1428571428571,
-       "passes_per_day": 137.14285714285714
+       "sat_minutes_per_day": 1211.9761904761906,
+       "coverage_minutes_per_day": 829.9285714285714,
+       "passes_per_day": 139.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 481.23809523809524,
-       "coverage_minutes_per_day": 403.4761904761905,
-       "passes_per_day": 85.28571428571429
+       "sat_minutes_per_day": 484.0476190476191,
+       "coverage_minutes_per_day": 414.92857142857144,
+       "passes_per_day": 86.14285714285714
       },
       "link_terrain": {
-       "sat_minutes_per_day": 343.26190476190476,
-       "coverage_minutes_per_day": 301.9047619047619,
-       "passes_per_day": 82.71428571428571
+       "sat_minutes_per_day": 343.7857142857143,
+       "coverage_minutes_per_day": 303.83333333333337,
+       "passes_per_day": 82.57142857142857
       },
-      "passes_lost_to_terrain_pct": 3.015075376884424
+      "passes_lost_to_terrain_pct": 4.145936981757881
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 13.634595456082025,
-       "uplink_p95_min": 63.24486702744381,
-       "e2e_p50_min": 53.2948288424479,
-       "e2e_p95_min": 134.19395683948167,
-       "tx_mah_per_day": 0.33866666666666667,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 12.693673490746004,
+       "uplink_p95_min": 56.95369250772535,
+       "e2e_p50_min": 37.760352514593976,
+       "e2e_p95_min": 116.72574557305934,
+       "tx_mah_per_day": 0.36533333333333334,
        "wake_mah_per_day": 0.16166666666666668,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6923333333333334,
-       "battery_years": 7.123023855534524,
+       "total_mah_per_day": 0.719,
+       "battery_years": 6.858841236877703,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 79.98341448780799,
-       "uplink_p95_min": 250.0334305515884,
-       "e2e_p50_min": 118.67629070582043,
-       "e2e_p95_min": 294.06277648825284,
-       "tx_mah_per_day": 0.8400000000000001,
-       "wake_mah_per_day": 0.525,
+       "delivery_ratio": 0.9066666666666666,
+       "uplink_p50_min": 66.71419831816475,
+       "uplink_p95_min": 277.3474166974682,
+       "e2e_p50_min": 96.83493004337652,
+       "e2e_p95_min": 313.0405895498974,
+       "tx_mah_per_day": 0.808,
+       "wake_mah_per_day": 0.505,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.557,
-       "battery_years": 3.167313326470821,
+       "total_mah_per_day": 1.505,
+       "battery_years": 3.2767487370864243,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 13.988152093431562,
-       "uplink_p95_min": 61.181155521864,
-       "e2e_p50_min": 52.90775099136226,
-       "e2e_p95_min": 129.9994537543079,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 14.23967788434129,
+       "uplink_p95_min": 57.82651640577954,
+       "e2e_p50_min": 51.327033213604714,
+       "e2e_p95_min": 115.64961518458041,
        "tx_mah_per_day": 0.3546666666666667,
-       "wake_mah_per_day": 0.15833333333333333,
+       "wake_mah_per_day": 0.16,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.705,
-       "battery_years": 6.995045176333431,
+       "total_mah_per_day": 0.7066666666666667,
+       "battery_years": 6.978547428276041,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 52.02646957347312,
-       "uplink_p95_min": 231.2617373645516,
-       "e2e_p50_min": 94.6068608089392,
-       "e2e_p95_min": 264.91793951110697,
-       "tx_mah_per_day": 0.7066666666666667,
-       "wake_mah_per_day": 0.4416666666666667,
+       "delivery_ratio": 0.9986666666666667,
+       "uplink_p50_min": 50.38031455334931,
+       "uplink_p95_min": 238.6787069760998,
+       "e2e_p50_min": 88.3868692090987,
+       "e2e_p95_min": 273.1351542677639,
+       "tx_mah_per_day": 0.7226666666666667,
+       "wake_mah_per_day": 0.45166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.3403333333333334,
-       "battery_years": 3.679313739852078,
+       "total_mah_per_day": 1.3663333333333332,
+       "battery_years": 3.6092999629044176,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -694,76 +694,76 @@
     "mid": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1691.904761904762,
-       "coverage_minutes_per_day": 962.0238095238095,
-       "passes_per_day": 162.71428571428572
+       "sat_minutes_per_day": 1675.904761904762,
+       "coverage_minutes_per_day": 1003.1428571428571,
+       "passes_per_day": 162.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 894.2619047619047,
-       "coverage_minutes_per_day": 653.9047619047618,
-       "passes_per_day": 135.57142857142858
+       "sat_minutes_per_day": 883.9761904761905,
+       "coverage_minutes_per_day": 668.7142857142857,
+       "passes_per_day": 133.42857142857142
       },
       "link_terrain": {
-       "sat_minutes_per_day": 669.952380952381,
-       "coverage_minutes_per_day": 531.452380952381,
-       "passes_per_day": 118.85714285714286
+       "sat_minutes_per_day": 651.8095238095239,
+       "coverage_minutes_per_day": 535.5238095238095,
+       "passes_per_day": 116.71428571428571
       },
-      "passes_lost_to_terrain_pct": 12.328767123287676
+      "passes_lost_to_terrain_pct": 12.526766595289073
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
-       "delivery_ratio": 0.9906666666666667,
-       "uplink_p50_min": 10.54406619881047,
-       "uplink_p95_min": 39.237606831039706,
-       "e2e_p50_min": 60.80632448916319,
-       "e2e_p95_min": 251.5381207965591,
-       "tx_mah_per_day": 0.3973333333333333,
-       "wake_mah_per_day": 0.17666666666666667,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 9.814450212758128,
+       "uplink_p95_min": 41.71125347026599,
+       "e2e_p50_min": 56.94285046562194,
+       "e2e_p95_min": 242.9918386602199,
+       "tx_mah_per_day": 0.39466666666666667,
+       "wake_mah_per_day": 0.175,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.766,
-       "battery_years": 6.43799849780035,
+       "total_mah_per_day": 0.7616666666666667,
+       "battery_years": 6.474626060369893,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 35.752987353084364,
-       "uplink_p95_min": 159.71913892397606,
-       "e2e_p50_min": 96.988608118974,
-       "e2e_p95_min": 269.22783109603625,
-       "tx_mah_per_day": 0.6186666666666667,
-       "wake_mah_per_day": 0.38666666666666666,
+       "uplink_p50_min": 35.777809018107654,
+       "uplink_p95_min": 140.80908863788494,
+       "e2e_p50_min": 101.3590259756417,
+       "e2e_p95_min": 297.8899403543661,
+       "tx_mah_per_day": 0.6719999999999999,
+       "wake_mah_per_day": 0.42000000000000004,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.1973333333333334,
-       "battery_years": 4.118741800652897,
+       "total_mah_per_day": 1.284,
+       "battery_years": 3.840737421584944,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 11.45191560134402,
-       "uplink_p95_min": 39.04776840249575,
-       "e2e_p50_min": 66.01445349017497,
-       "e2e_p95_min": 255.72880703665217,
-       "tx_mah_per_day": 0.4053333333333334,
-       "wake_mah_per_day": 0.17833333333333334,
+       "uplink_p50_min": 10.389713236868602,
+       "uplink_p95_min": 40.528697856619495,
+       "e2e_p50_min": 58.83005847030751,
+       "e2e_p95_min": 245.95339449059531,
+       "tx_mah_per_day": 0.392,
+       "wake_mah_per_day": 0.17166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7756666666666667,
-       "battery_years": 6.357765598601291,
+       "total_mah_per_day": 0.7556666666666667,
+       "battery_years": 6.526034648409882,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 30.45713409671201,
-       "uplink_p95_min": 115.45049507843287,
-       "e2e_p50_min": 110.20397501144568,
-       "e2e_p95_min": 273.8108043627489,
-       "tx_mah_per_day": 0.576,
-       "wake_mah_per_day": 0.36,
+       "uplink_p50_min": 27.64846435524896,
+       "uplink_p95_min": 96.9281726160621,
+       "e2e_p50_min": 82.38086126615502,
+       "e2e_p95_min": 256.1263244320317,
+       "tx_mah_per_day": 0.512,
+       "wake_mah_per_day": 0.32,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.128,
-       "battery_years": 4.371903235208395,
+       "total_mah_per_day": 1.024,
+       "battery_years": 4.8159246575342465,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -771,58 +771,30 @@
     "polar": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1748.952380952381,
-       "coverage_minutes_per_day": 1015.5238095238095,
-       "passes_per_day": 153.85714285714286
+       "sat_minutes_per_day": 1728.8809523809523,
+       "coverage_minutes_per_day": 990.3095238095239,
+       "passes_per_day": 151.85714285714286
       },
       "link_flat": {
-       "sat_minutes_per_day": 456.9523809523809,
-       "coverage_minutes_per_day": 387.6904761904762,
-       "passes_per_day": 77.28571428571429
+       "sat_minutes_per_day": 461.76190476190476,
+       "coverage_minutes_per_day": 377.0238095238095,
+       "passes_per_day": 78.0
       },
       "link_terrain": {
-       "sat_minutes_per_day": 367.64285714285717,
-       "coverage_minutes_per_day": 325.73809523809524,
-       "passes_per_day": 76.57142857142857
+       "sat_minutes_per_day": 371.0,
+       "coverage_minutes_per_day": 312.61904761904765,
+       "passes_per_day": 77.57142857142857
       },
-      "passes_lost_to_terrain_pct": 0.9242144177449174
+      "passes_lost_to_terrain_pct": 0.5494505494505475
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 14.764529512167549,
-       "uplink_p95_min": 56.47979084298014,
-       "e2e_p50_min": 25.129505790498417,
-       "e2e_p95_min": 108.735621965449,
-       "tx_mah_per_day": 0.32266666666666666,
-       "wake_mah_per_day": 0.15,
-       "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6646666666666666,
-       "battery_years": 7.4195188304639945,
-       "burst_airtime_s": 1.0666666666666667
-      },
-      "blind": {
-       "delivery_ratio": 0.94,
-       "uplink_p50_min": 63.22016015955815,
-       "uplink_p95_min": 229.08577162984415,
-       "e2e_p50_min": 94.1666306880236,
-       "e2e_p95_min": 282.1800295747569,
-       "tx_mah_per_day": 0.8,
-       "wake_mah_per_day": 0.5,
-       "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.492,
-       "battery_years": 3.3052994968599654,
-       "burst_airtime_s": 1.0666666666666667
-      }
-     },
-     "flat": {
-      "scheduled": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 15.208680817772983,
-       "uplink_p95_min": 62.376998567821985,
-       "e2e_p50_min": 26.012622808202288,
-       "e2e_p95_min": 105.11752032706026,
+       "delivery_ratio": 0.9993333333333333,
+       "uplink_p50_min": 14.81779485022997,
+       "uplink_p95_min": 52.231866824614954,
+       "e2e_p50_min": 24.06846569078625,
+       "e2e_p95_min": 100.47848265941631,
        "tx_mah_per_day": 0.3466666666666667,
        "wake_mah_per_day": 0.15833333333333333,
        "sleep_mah_per_day": 0.192,
@@ -831,16 +803,44 @@
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 54.900373825288504,
-       "uplink_p95_min": 236.51687017385206,
-       "e2e_p50_min": 101.77676753263901,
-       "e2e_p95_min": 291.48063239361335,
-       "tx_mah_per_day": 0.7626666666666667,
-       "wake_mah_per_day": 0.4766666666666667,
+       "delivery_ratio": 0.992,
+       "uplink_p50_min": 60.13421764179535,
+       "uplink_p95_min": 239.8255874505805,
+       "e2e_p50_min": 98.98699867466742,
+       "e2e_p95_min": 265.80569233204494,
+       "tx_mah_per_day": 0.8159999999999998,
+       "wake_mah_per_day": 0.51,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.4313333333333333,
-       "battery_years": 3.4453937000338155,
+       "total_mah_per_day": 1.5179999999999998,
+       "battery_years": 3.2486869890086094,
+       "burst_airtime_s": 1.0666666666666667
+      }
+     },
+     "flat": {
+      "scheduled": {
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 14.887410462081123,
+       "uplink_p95_min": 53.4412009028609,
+       "e2e_p50_min": 24.104092908772632,
+       "e2e_p95_min": 102.66279472579406,
+       "tx_mah_per_day": 0.33333333333333337,
+       "wake_mah_per_day": 0.15333333333333335,
+       "sleep_mah_per_day": 0.192,
+       "total_mah_per_day": 0.6786666666666668,
+       "battery_years": 7.26646392335226,
+       "burst_airtime_s": 1.0666666666666667
+      },
+      "blind": {
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 51.267299014226474,
+       "uplink_p95_min": 197.2439813420055,
+       "e2e_p50_min": 89.24682734359618,
+       "e2e_p95_min": 226.8535018453377,
+       "tx_mah_per_day": 0.7386666666666666,
+       "wake_mah_per_day": 0.4616666666666666,
+       "sleep_mah_per_day": 0.192,
+       "total_mah_per_day": 1.3923333333333332,
+       "battery_years": 3.541901016984727,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -855,58 +855,30 @@
     "sso": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1198.2380952380952,
-       "coverage_minutes_per_day": 808.5238095238095,
-       "passes_per_day": 137.14285714285714
+       "sat_minutes_per_day": 1210.642857142857,
+       "coverage_minutes_per_day": 829.452380952381,
+       "passes_per_day": 139.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 481.0476190476191,
-       "coverage_minutes_per_day": 403.35714285714283,
-       "passes_per_day": 85.14285714285714
+       "sat_minutes_per_day": 483.2142857142857,
+       "coverage_minutes_per_day": 414.33333333333337,
+       "passes_per_day": 86.14285714285714
       },
       "link_terrain": {
-       "sat_minutes_per_day": 351.38095238095235,
-       "coverage_minutes_per_day": 308.11904761904765,
-       "passes_per_day": 79.57142857142857
+       "sat_minutes_per_day": 353.4047619047619,
+       "coverage_minutes_per_day": 313.38095238095235,
+       "passes_per_day": 79.28571428571429
       },
-      "passes_lost_to_terrain_pct": 6.543624161073824
+      "passes_lost_to_terrain_pct": 7.960199004975122
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
-       "delivery_ratio": 0.998,
-       "uplink_p50_min": 14.189091605460423,
-       "uplink_p95_min": 65.18324382132994,
-       "e2e_p50_min": 53.2948288424479,
-       "e2e_p95_min": 141.39298175003768,
-       "tx_mah_per_day": 0.32,
-       "wake_mah_per_day": 0.14833333333333334,
-       "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6603333333333333,
-       "battery_years": 7.468208252370119,
-       "burst_airtime_s": 1.0666666666666667
-      },
-      "blind": {
-       "delivery_ratio": 0.9726666666666667,
-       "uplink_p50_min": 70.2522492536751,
-       "uplink_p95_min": 234.68454769576297,
-       "e2e_p50_min": 105.47941683061944,
-       "e2e_p95_min": 272.04858168355764,
-       "tx_mah_per_day": 0.8640000000000001,
-       "wake_mah_per_day": 0.54,
-       "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.596,
-       "battery_years": 3.089916572252549,
-       "burst_airtime_s": 1.0666666666666667
-      }
-     },
-     "flat": {
-      "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 13.970893304576748,
-       "uplink_p95_min": 60.23309972022793,
-       "e2e_p50_min": 52.7379162751371,
-       "e2e_p95_min": 129.9994537543079,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 13.285763702079203,
+       "uplink_p95_min": 68.33200177211349,
+       "e2e_p50_min": 40.63054390325457,
+       "e2e_p95_min": 122.72619967002676,
        "tx_mah_per_day": 0.36533333333333334,
        "wake_mah_per_day": 0.16,
        "sleep_mah_per_day": 0.192,
@@ -915,16 +887,44 @@
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 1.0,
-       "uplink_p50_min": 52.78179881084155,
-       "uplink_p95_min": 231.2617373645516,
-       "e2e_p50_min": 94.97437774834034,
-       "e2e_p95_min": 264.91793951110697,
-       "tx_mah_per_day": 0.7066666666666667,
-       "wake_mah_per_day": 0.4416666666666667,
+       "delivery_ratio": 0.9446666666666667,
+       "uplink_p50_min": 62.55762523807304,
+       "uplink_p95_min": 264.3736958511841,
+       "e2e_p50_min": 94.8733900935069,
+       "e2e_p95_min": 329.3930015116719,
+       "tx_mah_per_day": 0.784,
+       "wake_mah_per_day": 0.49000000000000005,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.3403333333333334,
-       "battery_years": 3.679313739852078,
+       "total_mah_per_day": 1.4660000000000002,
+       "battery_years": 3.3639200882094595,
+       "burst_airtime_s": 1.0666666666666667
+      }
+     },
+     "flat": {
+      "scheduled": {
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 14.190906490685059,
+       "uplink_p95_min": 57.82651640577954,
+       "e2e_p50_min": 51.69605335148048,
+       "e2e_p95_min": 115.64961518458041,
+       "tx_mah_per_day": 0.3546666666666667,
+       "wake_mah_per_day": 0.16,
+       "sleep_mah_per_day": 0.192,
+       "total_mah_per_day": 0.7066666666666667,
+       "battery_years": 6.978547428276041,
+       "burst_airtime_s": 1.0666666666666667
+      },
+      "blind": {
+       "delivery_ratio": 0.9973333333333333,
+       "uplink_p50_min": 49.23484737071182,
+       "uplink_p95_min": 225.6318229422805,
+       "e2e_p50_min": 87.55812973037101,
+       "e2e_p95_min": 282.08870106988616,
+       "tx_mah_per_day": 0.7226666666666667,
+       "wake_mah_per_day": 0.45166666666666666,
+       "sleep_mah_per_day": 0.192,
+       "total_mah_per_day": 1.3663333333333332,
+       "battery_years": 3.6092999629044176,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -932,76 +932,76 @@
     "mid": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1691.0238095238094,
-       "coverage_minutes_per_day": 961.7142857142857,
-       "passes_per_day": 162.71428571428572
+       "sat_minutes_per_day": 1675.047619047619,
+       "coverage_minutes_per_day": 1002.8571428571429,
+       "passes_per_day": 162.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 894.6428571428571,
-       "coverage_minutes_per_day": 654.1190476190476,
-       "passes_per_day": 135.42857142857142
+       "sat_minutes_per_day": 884.2380952380953,
+       "coverage_minutes_per_day": 668.9285714285714,
+       "passes_per_day": 133.42857142857142
       },
       "link_terrain": {
-       "sat_minutes_per_day": 669.3095238095239,
-       "coverage_minutes_per_day": 532.0952380952381,
-       "passes_per_day": 124.57142857142857
+       "sat_minutes_per_day": 657.4761904761905,
+       "coverage_minutes_per_day": 534.3333333333334,
+       "passes_per_day": 123.57142857142857
       },
-      "passes_lost_to_terrain_pct": 8.016877637130804
+      "passes_lost_to_terrain_pct": 7.387580299785867
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 10.62152992109865,
-       "uplink_p95_min": 40.62961234063404,
-       "e2e_p50_min": 59.84883771342866,
-       "e2e_p95_min": 248.37339557793706,
-       "tx_mah_per_day": 0.4,
-       "wake_mah_per_day": 0.18166666666666667,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 8.892341892182534,
+       "uplink_p95_min": 39.246591654624204,
+       "e2e_p50_min": 54.95782711939094,
+       "e2e_p95_min": 245.95595708864616,
+       "tx_mah_per_day": 0.3973333333333333,
+       "wake_mah_per_day": 0.17833333333333334,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7736666666666666,
-       "battery_years": 6.374201011609308,
+       "total_mah_per_day": 0.7676666666666667,
+       "battery_years": 6.424021080306211,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 31.567533711037687,
-       "uplink_p95_min": 145.6812368632309,
-       "e2e_p50_min": 90.3640839843935,
-       "e2e_p95_min": 262.00392960798024,
-       "tx_mah_per_day": 0.6986666666666665,
-       "wake_mah_per_day": 0.43666666666666665,
+       "uplink_p50_min": 35.70073362223993,
+       "uplink_p95_min": 131.08269170033657,
+       "e2e_p50_min": 86.08192783968674,
+       "e2e_p95_min": 279.886927232316,
+       "tx_mah_per_day": 0.696,
+       "wake_mah_per_day": 0.43499999999999994,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.3273333333333333,
-       "battery_years": 3.7153492084242106,
+       "total_mah_per_day": 1.323,
+       "battery_years": 3.7275184046221232,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 11.45191560134402,
-       "uplink_p95_min": 39.04776840249575,
-       "e2e_p50_min": 66.01445349017497,
-       "e2e_p95_min": 255.72880703665217,
-       "tx_mah_per_day": 0.4053333333333334,
-       "wake_mah_per_day": 0.17833333333333334,
+       "uplink_p50_min": 10.398680519285259,
+       "uplink_p95_min": 40.528697856619495,
+       "e2e_p50_min": 58.77724654892875,
+       "e2e_p95_min": 246.02635731193774,
+       "tx_mah_per_day": 0.392,
+       "wake_mah_per_day": 0.17166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7756666666666667,
-       "battery_years": 6.357765598601291,
+       "total_mah_per_day": 0.7556666666666667,
+       "battery_years": 6.526034648409882,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 30.45713409671201,
-       "uplink_p95_min": 115.45049507843287,
-       "e2e_p50_min": 110.20397501144568,
-       "e2e_p95_min": 273.8108043627489,
-       "tx_mah_per_day": 0.576,
-       "wake_mah_per_day": 0.36,
+       "uplink_p50_min": 28.248161688447,
+       "uplink_p95_min": 97.23960611130747,
+       "e2e_p50_min": 81.67973961996321,
+       "e2e_p95_min": 253.46715168683252,
+       "tx_mah_per_day": 0.5146666666666666,
+       "wake_mah_per_day": 0.32166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.128,
-       "battery_years": 4.371903235208395,
+       "total_mah_per_day": 1.0283333333333333,
+       "battery_years": 4.795630647632157,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -1009,76 +1009,76 @@
     "polar": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1747.7857142857142,
-       "coverage_minutes_per_day": 1015.1190476190476,
-       "passes_per_day": 153.85714285714286
+       "sat_minutes_per_day": 1727.595238095238,
+       "coverage_minutes_per_day": 989.7619047619047,
+       "passes_per_day": 152.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 457.1904761904762,
-       "coverage_minutes_per_day": 387.9761904761905,
-       "passes_per_day": 77.42857142857143
+       "sat_minutes_per_day": 461.6904761904762,
+       "coverage_minutes_per_day": 376.9523809523809,
+       "passes_per_day": 78.14285714285714
       },
       "link_terrain": {
-       "sat_minutes_per_day": 409.64285714285717,
-       "coverage_minutes_per_day": 356.1904761904762,
-       "passes_per_day": 76.28571428571429
+       "sat_minutes_per_day": 412.35714285714283,
+       "coverage_minutes_per_day": 343.57142857142856,
+       "passes_per_day": 77.0
       },
-      "passes_lost_to_terrain_pct": 1.4760147601476037
+      "passes_lost_to_terrain_pct": 1.4625228519195566
      },
      "satellites": 24,
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 15.694352106430596,
-       "uplink_p95_min": 56.85297062706002,
-       "e2e_p50_min": 26.914965515614313,
-       "e2e_p95_min": 120.89605283580553,
-       "tx_mah_per_day": 0.31733333333333336,
-       "wake_mah_per_day": 0.14666666666666667,
+       "uplink_p50_min": 14.864240237112002,
+       "uplink_p95_min": 52.94820536491078,
+       "e2e_p50_min": 26.372675637575473,
+       "e2e_p95_min": 100.47716725134934,
+       "tx_mah_per_day": 0.33866666666666667,
+       "wake_mah_per_day": 0.15666666666666668,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6559999999999999,
-       "battery_years": 7.517540928833947,
+       "total_mah_per_day": 0.6873333333333334,
+       "battery_years": 7.1748402269375395,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.9946666666666667,
-       "uplink_p50_min": 67.42680882647862,
-       "uplink_p95_min": 256.0339483970187,
-       "e2e_p50_min": 102.63422540680598,
-       "e2e_p95_min": 296.46921051157256,
-       "tx_mah_per_day": 0.7946666666666666,
-       "wake_mah_per_day": 0.4966666666666667,
+       "delivery_ratio": 0.9986666666666667,
+       "uplink_p50_min": 64.68442459599585,
+       "uplink_p95_min": 207.798240164842,
+       "e2e_p50_min": 100.95029844158901,
+       "e2e_p95_min": 232.9169266536496,
+       "tx_mah_per_day": 0.7733333333333333,
+       "wake_mah_per_day": 0.4833333333333333,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.4833333333333334,
-       "battery_years": 3.32461135908881,
+       "total_mah_per_day": 1.4486666666666665,
+       "battery_years": 3.4041694772078253,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 15.279085293798804,
-       "uplink_p95_min": 58.317235753719714,
-       "e2e_p50_min": 25.560476263260593,
-       "e2e_p95_min": 115.62023062403274,
-       "tx_mah_per_day": 0.3466666666666667,
-       "wake_mah_per_day": 0.15833333333333333,
+       "uplink_p50_min": 14.909260252827881,
+       "uplink_p95_min": 54.01099590738483,
+       "e2e_p50_min": 24.35826193572187,
+       "e2e_p95_min": 100.77618891937166,
+       "tx_mah_per_day": 0.33333333333333337,
+       "wake_mah_per_day": 0.15333333333333335,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.697,
-       "battery_years": 7.0753326389025375,
+       "total_mah_per_day": 0.6786666666666668,
+       "battery_years": 7.26646392335226,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 54.900373825288504,
-       "uplink_p95_min": 236.51687017385206,
-       "e2e_p50_min": 101.77676753263901,
-       "e2e_p95_min": 291.48063239361335,
-       "tx_mah_per_day": 0.7626666666666667,
-       "wake_mah_per_day": 0.4766666666666667,
+       "uplink_p50_min": 51.267299014226474,
+       "uplink_p95_min": 197.2439813420055,
+       "e2e_p50_min": 89.24682734359618,
+       "e2e_p95_min": 226.8535018453377,
+       "tx_mah_per_day": 0.728,
+       "wake_mah_per_day": 0.45499999999999996,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.4313333333333333,
-       "battery_years": 3.4453937000338155,
+       "total_mah_per_day": 1.375,
+       "battery_years": 3.586550435865504,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -1093,19 +1093,19 @@
     "sso": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1194.5714285714287,
-       "coverage_minutes_per_day": 807.2619047619047,
-       "passes_per_day": 136.14285714285714
+       "sat_minutes_per_day": 1208.1666666666665,
+       "coverage_minutes_per_day": 828.5,
+       "passes_per_day": 138.85714285714286
       },
       "link_flat": {
-       "sat_minutes_per_day": 480.26190476190476,
-       "coverage_minutes_per_day": 402.9047619047619,
-       "passes_per_day": 85.14285714285714
+       "sat_minutes_per_day": 482.5238095238095,
+       "coverage_minutes_per_day": 413.9761904761905,
+       "passes_per_day": 86.42857142857143
       },
       "link_terrain": {
-       "sat_minutes_per_day": 480.26190476190476,
-       "coverage_minutes_per_day": 402.9047619047619,
-       "passes_per_day": 85.14285714285714
+       "sat_minutes_per_day": 482.5238095238095,
+       "coverage_minutes_per_day": 413.9761904761905,
+       "passes_per_day": 86.42857142857143
       },
       "passes_lost_to_terrain_pct": 0.0
      },
@@ -1113,56 +1113,56 @@
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 14.543438426344029,
-       "uplink_p95_min": 62.49510611272394,
-       "e2e_p50_min": 54.5653254486367,
-       "e2e_p95_min": 133.12350523228795,
-       "tx_mah_per_day": 0.3306666666666666,
-       "wake_mah_per_day": 0.15166666666666667,
+       "uplink_p50_min": 13.492750234214812,
+       "uplink_p95_min": 57.138206915957845,
+       "e2e_p50_min": 46.6628404603974,
+       "e2e_p95_min": 116.72574557305934,
+       "tx_mah_per_day": 0.368,
+       "wake_mah_per_day": 0.16333333333333333,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6743333333333332,
-       "battery_years": 7.313158946092539,
+       "total_mah_per_day": 0.7233333333333333,
+       "battery_years": 6.817751404583045,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.9886666666666667,
-       "uplink_p50_min": 55.0848591376381,
-       "uplink_p95_min": 196.26875378639429,
-       "e2e_p50_min": 88.09015686702188,
-       "e2e_p95_min": 235.14239074023698,
-       "tx_mah_per_day": 0.768,
-       "wake_mah_per_day": 0.48,
+       "delivery_ratio": 0.992,
+       "uplink_p50_min": 47.09390990885052,
+       "uplink_p95_min": 224.95141135995502,
+       "e2e_p50_min": 86.23354846986331,
+       "e2e_p95_min": 270.06525074992123,
+       "tx_mah_per_day": 0.7093333333333334,
+       "wake_mah_per_day": 0.44333333333333336,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.44,
-       "battery_years": 3.4246575342465753,
+       "total_mah_per_day": 1.3446666666666667,
+       "battery_years": 3.6674567545724353,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 13.854220313144399,
-       "uplink_p95_min": 62.33171274517552,
-       "e2e_p50_min": 52.742265030956816,
-       "e2e_p95_min": 134.025167835825,
-       "tx_mah_per_day": 0.36533333333333334,
+       "uplink_p50_min": 14.058267558914789,
+       "uplink_p95_min": 61.46001512252265,
+       "e2e_p50_min": 51.25209777885017,
+       "e2e_p95_min": 114.4768101586702,
+       "tx_mah_per_day": 0.3546666666666667,
        "wake_mah_per_day": 0.16,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7173333333333334,
-       "battery_years": 6.87477720629424,
+       "total_mah_per_day": 0.7066666666666667,
+       "battery_years": 6.978547428276041,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.9853333333333333,
-       "uplink_p50_min": 52.40761006037186,
-       "uplink_p95_min": 251.00786521889947,
-       "e2e_p50_min": 97.8600595679595,
-       "e2e_p95_min": 282.21262444518703,
-       "tx_mah_per_day": 0.7066666666666667,
-       "wake_mah_per_day": 0.4416666666666667,
+       "delivery_ratio": 0.996,
+       "uplink_p50_min": 48.57966971730639,
+       "uplink_p95_min": 243.61032111669383,
+       "e2e_p50_min": 84.68637026952656,
+       "e2e_p95_min": 290.1013775182701,
+       "tx_mah_per_day": 0.7226666666666667,
+       "wake_mah_per_day": 0.45166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.3403333333333334,
-       "battery_years": 3.679313739852078,
+       "total_mah_per_day": 1.3663333333333332,
+       "battery_years": 3.6092999629044176,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -1170,19 +1170,19 @@
     "mid": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1689.142857142857,
-       "coverage_minutes_per_day": 961.1190476190476,
-       "passes_per_day": 162.85714285714286
+       "sat_minutes_per_day": 1673.3095238095236,
+       "coverage_minutes_per_day": 1002.452380952381,
+       "passes_per_day": 162.0
       },
       "link_flat": {
-       "sat_minutes_per_day": 895.0714285714286,
-       "coverage_minutes_per_day": 654.2619047619047,
-       "passes_per_day": 135.28571428571428
+       "sat_minutes_per_day": 883.952380952381,
+       "coverage_minutes_per_day": 668.7380952380953,
+       "passes_per_day": 133.28571428571428
       },
       "link_terrain": {
-       "sat_minutes_per_day": 895.0714285714286,
-       "coverage_minutes_per_day": 654.2619047619047,
-       "passes_per_day": 135.28571428571428
+       "sat_minutes_per_day": 883.952380952381,
+       "coverage_minutes_per_day": 668.7380952380953,
+       "passes_per_day": 133.28571428571428
       },
       "passes_lost_to_terrain_pct": 0.0
      },
@@ -1190,10 +1190,10 @@
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 11.066076796048826,
-       "uplink_p95_min": 38.65836076856246,
-       "e2e_p50_min": 64.7168115225383,
-       "e2e_p95_min": 255.5286671953736,
+       "uplink_p50_min": 10.444986453230861,
+       "uplink_p95_min": 39.7351985445993,
+       "e2e_p50_min": 60.556350984322734,
+       "e2e_p95_min": 246.94016326164612,
        "tx_mah_per_day": 0.3973333333333333,
        "wake_mah_per_day": 0.175,
        "sleep_mah_per_day": 0.192,
@@ -1203,43 +1203,43 @@
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 29.811749019302564,
-       "uplink_p95_min": 106.07801318990217,
-       "e2e_p50_min": 96.78060775257885,
-       "e2e_p95_min": 260.2570106009037,
-       "tx_mah_per_day": 0.592,
-       "wake_mah_per_day": 0.37,
+       "uplink_p50_min": 26.943520132441336,
+       "uplink_p95_min": 102.41664813066572,
+       "e2e_p50_min": 85.15099481915968,
+       "e2e_p95_min": 261.0673012189363,
+       "tx_mah_per_day": 0.576,
+       "wake_mah_per_day": 0.36,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.1540000000000001,
-       "battery_years": 4.273402815697633,
+       "total_mah_per_day": 1.128,
+       "battery_years": 4.371903235208395,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 11.451894372006427,
-       "uplink_p95_min": 40.62347185819937,
-       "e2e_p50_min": 65.80740026608255,
-       "e2e_p95_min": 252.67022523499884,
-       "tx_mah_per_day": 0.4053333333333334,
-       "wake_mah_per_day": 0.17833333333333334,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 10.421622088391935,
+       "uplink_p95_min": 36.655249366799275,
+       "e2e_p50_min": 59.046223295576965,
+       "e2e_p95_min": 245.95339449059531,
+       "tx_mah_per_day": 0.38666666666666666,
+       "wake_mah_per_day": 0.17166666666666666,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.7756666666666667,
-       "battery_years": 6.357765598601291,
+       "total_mah_per_day": 0.7503333333333333,
+       "battery_years": 6.572421389580278,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 30.1798507731095,
-       "uplink_p95_min": 108.48215429508556,
-       "e2e_p50_min": 96.46079069567882,
-       "e2e_p95_min": 269.4807300339711,
-       "tx_mah_per_day": 0.5626666666666666,
-       "wake_mah_per_day": 0.3516666666666667,
+       "uplink_p50_min": 28.31849086918713,
+       "uplink_p95_min": 106.3474009316797,
+       "e2e_p50_min": 82.9074846051842,
+       "e2e_p95_min": 269.49041994446617,
+       "tx_mah_per_day": 0.5093333333333334,
+       "wake_mah_per_day": 0.3183333333333333,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.1063333333333334,
-       "battery_years": 4.457523515500212,
+       "total_mah_per_day": 1.0196666666666667,
+       "battery_years": 4.836391156569207,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -1247,18 +1247,18 @@
     "polar": {
      "passes": {
       "geometric": {
-       "sat_minutes_per_day": 1744.2142857142858,
-       "coverage_minutes_per_day": 1013.952380952381,
-       "passes_per_day": 153.42857142857142
+       "sat_minutes_per_day": 1724.2857142857142,
+       "coverage_minutes_per_day": 988.7619047619047,
+       "passes_per_day": 152.28571428571428
       },
       "link_flat": {
-       "sat_minutes_per_day": 457.35714285714283,
-       "coverage_minutes_per_day": 388.16666666666663,
+       "sat_minutes_per_day": 461.0952380952381,
+       "coverage_minutes_per_day": 376.5476190476191,
        "passes_per_day": 77.85714285714286
       },
       "link_terrain": {
-       "sat_minutes_per_day": 457.35714285714283,
-       "coverage_minutes_per_day": 388.16666666666663,
+       "sat_minutes_per_day": 461.0952380952381,
+       "coverage_minutes_per_day": 376.5476190476191,
        "passes_per_day": 77.85714285714286
       },
       "passes_lost_to_terrain_pct": 0.0
@@ -1267,56 +1267,56 @@
      "terrain": {
       "scheduled": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 15.228590891462954,
-       "uplink_p95_min": 55.81808219469253,
-       "e2e_p50_min": 26.500187838858015,
-       "e2e_p95_min": 109.96557038180893,
-       "tx_mah_per_day": 0.31733333333333336,
-       "wake_mah_per_day": 0.14833333333333334,
+       "uplink_p50_min": 15.204176066375748,
+       "uplink_p95_min": 54.60427842990994,
+       "e2e_p50_min": 26.53075766675429,
+       "e2e_p95_min": 101.93843817144912,
+       "tx_mah_per_day": 0.33333333333333337,
+       "wake_mah_per_day": 0.15333333333333335,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6576666666666666,
-       "battery_years": 7.498489887453222,
+       "total_mah_per_day": 0.6786666666666668,
+       "battery_years": 7.26646392335226,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
-       "delivery_ratio": 0.984,
-       "uplink_p50_min": 56.56696560293555,
-       "uplink_p95_min": 203.66704281983328,
-       "e2e_p50_min": 95.73617210193673,
-       "e2e_p95_min": 235.78408581397102,
-       "tx_mah_per_day": 0.7413333333333332,
-       "wake_mah_per_day": 0.4633333333333334,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 52.987531726779224,
+       "uplink_p95_min": 203.67139912277528,
+       "e2e_p50_min": 88.73407229099332,
+       "e2e_p95_min": 235.17546503230838,
+       "tx_mah_per_day": 0.752,
+       "wake_mah_per_day": 0.47000000000000003,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.3966666666666667,
-       "battery_years": 3.530911825285252,
+       "total_mah_per_day": 1.414,
+       "battery_years": 3.487628606304858,
        "burst_airtime_s": 1.0666666666666667
       }
      },
      "flat": {
       "scheduled": {
-       "delivery_ratio": 0.9993333333333333,
-       "uplink_p50_min": 15.033300617087905,
-       "uplink_p95_min": 59.94236058253049,
-       "e2e_p50_min": 25.68981097935272,
-       "e2e_p95_min": 111.79788527273233,
-       "tx_mah_per_day": 0.3466666666666667,
-       "wake_mah_per_day": 0.16,
+       "delivery_ratio": 1.0,
+       "uplink_p50_min": 15.155562585957037,
+       "uplink_p95_min": 55.07360039531142,
+       "e2e_p50_min": 25.48003972862959,
+       "e2e_p95_min": 102.93761780838638,
+       "tx_mah_per_day": 0.33333333333333337,
+       "wake_mah_per_day": 0.15333333333333335,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 0.6986666666666667,
-       "battery_years": 7.058454459897521,
+       "total_mah_per_day": 0.6786666666666668,
+       "battery_years": 7.26646392335226,
        "burst_airtime_s": 1.0666666666666667
       },
       "blind": {
        "delivery_ratio": 1.0,
-       "uplink_p50_min": 56.39293485634043,
-       "uplink_p95_min": 219.4732791683,
-       "e2e_p50_min": 94.6583526189895,
-       "e2e_p95_min": 263.31945619246414,
-       "tx_mah_per_day": 0.7626666666666667,
-       "wake_mah_per_day": 0.4766666666666667,
+       "uplink_p50_min": 51.267299014226474,
+       "uplink_p95_min": 197.2439813420055,
+       "e2e_p50_min": 89.24682734359618,
+       "e2e_p95_min": 226.8535018453377,
+       "tx_mah_per_day": 0.728,
+       "wake_mah_per_day": 0.45499999999999996,
        "sleep_mah_per_day": 0.192,
-       "total_mah_per_day": 1.4313333333333333,
-       "battery_years": 3.4453937000338155,
+       "total_mah_per_day": 1.375,
+       "battery_years": 3.586550435865504,
        "burst_airtime_s": 1.0666666666666667
       }
      }
@@ -1324,13 +1324,17 @@
    }
   }
  },
- "tle_snapshot": {
-  "source": "CelesTrak GP data (celestrak.org), group 'active', TLE format, filtered to the three orbit classes",
+ "orbit_data": {
+  "source": "CelesTrak GP data (celestrak.org), TLE format, fetched at runtime",
   "group": "active",
-  "fetched_utc": "2026-11-08T23:31:39Z",
-  "newest_epoch_utc": "2026-11-08T08:57:01Z",
-  "count": 7642,
-  "note": "object names removed; selection in this project uses orbital geometry only"
+  "fetched_utc": "2026-11-11T23:12:05Z",
+  "newest_epoch_utc": "2026-11-13T11:11:17Z",
+  "count": 15880,
+  "note": "object names removed; selection in this project uses orbital geometry only",
+  "used_epochs_utc": [
+   "2026-11-10T14:15:59Z",
+   "2026-11-11T15:09:37Z"
+  ]
  },
  "horizon_source": {
   "source": "swisstopo height profile service (swissALTI3D, 2 m DTM), api3.geo.admin.ch/rest/services/profile.json",
@@ -1342,64 +1346,64 @@
   "rows": [
    {
     "sat_gt_dbk": -24.0,
-    "min_link_elevation_deg": 20.748193440800442,
+    "min_link_elevation_deg": 20.79794330183435,
     "sites": {
      "lauterbrunnen_valley": {
-      "flat": 53.0,
-      "terrain": 41.57142857142857,
-      "lost_pct": 21.5633423180593
+      "flat": 54.57142857142857,
+      "terrain": 42.142857142857146,
+      "lost_pct": 22.774869109947648
      },
      "schilthorn_ridge": {
-      "flat": 52.714285714285715,
-      "terrain": 52.714285714285715,
+      "flat": 54.42857142857143,
+      "terrain": 54.42857142857143,
       "lost_pct": 0.0
      }
     }
    },
    {
     "sat_gt_dbk": -22.0,
-    "min_link_elevation_deg": 14.628960533629794,
+    "min_link_elevation_deg": 14.678710394663701,
     "sites": {
      "lauterbrunnen_valley": {
-      "flat": 68.85714285714286,
-      "terrain": 43.714285714285715,
-      "lost_pct": 36.51452282157677
+      "flat": 68.71428571428571,
+      "terrain": 45.142857142857146,
+      "lost_pct": 34.3035343035343
      },
      "schilthorn_ridge": {
-      "flat": 68.85714285714286,
-      "terrain": 68.85714285714286,
+      "flat": 68.57142857142857,
+      "terrain": 68.57142857142857,
       "lost_pct": 0.0
      }
     }
    },
    {
     "sat_gt_dbk": -20.0,
-    "min_link_elevation_deg": 9.753474152306836,
+    "min_link_elevation_deg": 9.803224013340744,
     "sites": {
      "lauterbrunnen_valley": {
-      "flat": 85.0,
-      "terrain": 44.57142857142857,
-      "lost_pct": 47.56302521008403
+      "flat": 86.28571428571429,
+      "terrain": 46.0,
+      "lost_pct": 46.68874172185431
      },
      "schilthorn_ridge": {
-      "flat": 85.14285714285714,
-      "terrain": 85.14285714285714,
+      "flat": 86.42857142857143,
+      "terrain": 86.42857142857143,
       "lost_pct": 0.0
      }
     }
    },
    {
     "sat_gt_dbk": -18.0,
-    "min_link_elevation_deg": 6.121734296831573,
+    "min_link_elevation_deg": 6.17148415786548,
     "sites": {
      "lauterbrunnen_valley": {
-      "flat": 101.14285714285714,
-      "terrain": 44.57142857142857,
-      "lost_pct": 55.93220338983051
+      "flat": 101.42857142857143,
+      "terrain": 46.0,
+      "lost_pct": 54.64788732394366
      },
      "schilthorn_ridge": {
-      "flat": 100.85714285714286,
-      "terrain": 100.85714285714286,
+      "flat": 101.28571428571429,
+      "terrain": 101.28571428571429,
       "lost_pct": 0.0
      }
     }
@@ -1409,13 +1413,13 @@
     "min_link_elevation_deg": 3.8332406892718174,
     "sites": {
      "lauterbrunnen_valley": {
-      "flat": 112.0,
-      "terrain": 44.57142857142857,
-      "lost_pct": 60.204081632653065
+      "flat": 112.85714285714286,
+      "terrain": 46.0,
+      "lost_pct": 59.24050632911393
      },
      "schilthorn_ridge": {
-      "flat": 111.57142857142857,
-      "terrain": 111.57142857142857,
+      "flat": 112.85714285714286,
+      "terrain": 112.85714285714286,
       "lost_pct": 0.0
      }
     }

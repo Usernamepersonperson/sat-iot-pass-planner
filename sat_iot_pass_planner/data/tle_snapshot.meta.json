@@ -1,8 +1,0 @@
-{
- "source": "CelesTrak GP data (celestrak.org), group 'active', TLE format, filtered to the three orbit classes",
- "group": "active",
- "fetched_utc": "2026-11-08T23:31:39Z",
- "newest_epoch_utc": "2026-11-08T08:57:01Z",
- "count": 7642,
- "note": "object names removed; selection in this project uses orbital geometry only"
-}

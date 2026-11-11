@@ -14,7 +14,8 @@ from .passes import compute_visibility, extract_passes, load_sites, pass_stats
 from .plots import main_figure, post_figure, sky_figure, timeline_figure
 from .report import gt_markdown, gt_sweep, policy_markdown, results_markdown, site_report
 from .sched import DeviceParams, SchedulePolicy, device_schedule, dump_schedule
-from .tle import DATA_DIR, ORBIT_CLASSES, fetch_celestrak, load_snapshot, parse_tle_text, save_snapshot
+from .synthetic import load_synthetic
+from .tle import DATA_DIR, MIN_REFETCH_S, ORBIT_CLASSES, FetchRefused, fetch_to_cache, load_cached
 from .validate import run_validation
 
 SITE_ORDER = ["interlaken_valley", "lauterbrunnen_valley", "eiger_north_face_base", "kleine_scheidegg_saddle", "schilthorn_ridge"]
@@ -29,6 +30,13 @@ def _link_from_args(a) -> LinkParams:
         freq_mhz=a.freq_mhz if a.freq_mhz is not None else base.freq_mhz,
         data_rate_bps=a.rate_bps if a.rate_bps is not None else base.data_rate_bps,
     )
+
+
+def _add_data_args(p):
+    p.add_argument("--synthetic", action="store_true", help="use made-up element sets (offline; tests and CI)")
+    p.add_argument("--group", default="active", help="CelesTrak group to use from the cache")
+    p.add_argument("--cache-dir", default=None, help="default: $SAT_IOT_CACHE_DIR or ./cache")
+    p.add_argument("--no-fetch", action="store_true", help="fail instead of downloading when the cache is empty")
 
 
 def _add_link_args(p):
@@ -50,15 +58,15 @@ def cmd_validate(_a) -> int:
 
 
 def cmd_fetch_tle(a) -> int:
-    text = fetch_celestrak(a.group)
-    tles = parse_tle_text(text)
-    if not tles:
-        print(
-            "no element sets parsed; CelesTrak may be rate-limiting (one request per group per 2 h):", text[:200], file=sys.stderr
-        )
+    try:
+        path, n = fetch_to_cache(a.group, a.cache_dir)
+    except FetchRefused as e:
+        print(e, file=sys.stderr)
         return 1
-    path = save_snapshot(tles, "CelesTrak GP data (celestrak.org), TLE format", a.group)
-    print(f"saved {len(tles)} element sets to {path}")
+    if n == 0:
+        print(f"kept {path}: younger than {MIN_REFETCH_S // 3600} h, CelesTrak updates about every 2 h and asks for no more frequent downloads")
+    else:
+        print(f"saved {n} element sets to {path}")
     return 0
 
 
@@ -83,8 +91,10 @@ def cmd_fetch_terrain(_a) -> int:
 
 
 def _load(a):
-    snap, meta = load_snapshot()
-    return snap, meta
+    """Synthetic sets when asked, else the cached CelesTrak snapshot (downloaded once if the cache is empty)."""
+    if getattr(a, "synthetic", False):
+        return load_synthetic()
+    return load_cached(a.group, a.cache_dir, auto_fetch=not a.no_fetch)
 
 
 def cmd_passes(a) -> int:
@@ -123,13 +133,17 @@ def cmd_demo(a) -> int:
     out.mkdir(parents=True, exist_ok=True)
     fig_dir = Path(a.figures) if a.figures else out
     fig_dir.mkdir(parents=True, exist_ok=True)
-    snap, meta = load_snapshot()
+    snap, meta = _load(a)
     sites = {k: v for k, v in load_sites().items() if k in SITE_ORDER}
     link = _link_from_args(a)
     sets = {k: v for k, v in DEFAULT_SETS.items() if k in snap_classes(snap)}
     gen_days = min(a.gen_days, a.days - 1) if a.days > 1 else a.days
     res, chosen, vis = run_all(snap, sites, sets, days=a.days, gen_days=gen_days, link=link, keep_vis=True, probe_msgs=a.probes)
-    res["tle_snapshot"] = meta
+    used = [t.epoch for v in chosen.values() for t in v]
+    res["orbit_data"] = {
+        **meta,
+        "used_epochs_utc": [min(used).strftime("%Y-%m-%dT%H:%M:%SZ"), max(used).strftime("%Y-%m-%dT%H:%M:%SZ")],
+    }
     res["horizon_source"] = json.loads((DATA_DIR / "horizons.json").read_text())["_meta"]
     set_key = "sso" if "sso" in chosen else next(iter(chosen))
     # sensitivity to satellite G/T (ridge vs valley)
@@ -160,7 +174,13 @@ def cmd_demo(a) -> int:
     (out / f"schedule_{sched_key}.json").write_text(dump_schedule(sched))
     timeline_figure(v0, fig_dir / f"timeline_{sched_key}.png")
     sky_figure(v0, fig_dir / f"sky_{sched_key}.png")
-    sub = f"Simulated from public orbital elements ({meta.get('newest_epoch_utc', '?')[:10]}) and swisstopo terrain; 24 satellites, {set_key} orbit class"
+    if meta.get("synthetic"):
+        orbit_src, post_src = "SYNTHETIC orbital elements (made up, not real objects)", "Simulated: SYNTHETIC orbits"
+    else:
+        fetched = (meta.get("fetched_utc") or "?")[:10]
+        orbit_src = f"public orbital elements (Source: CelesTrak, fetched {fetched})"
+        post_src = f"Simulated: CelesTrak elements fetched {fetched}"
+    sub = f"Simulated from {orbit_src} and swisstopo terrain; 24 satellites, {set_key} orbit class"
     order = [k for k in SITE_ORDER if k in sites]
     if {"lauterbrunnen_valley", "schilthorn_ridge"} <= set(sites):
         post_figure(
@@ -169,7 +189,7 @@ def cmd_demo(a) -> int:
             res["sites"]["lauterbrunnen_valley"]["sets"][set_key]["passes"],
             res["sites"]["schilthorn_ridge"]["sets"][set_key]["passes"],
             fig_dir / "post-figure.png",
-            "Simulated: public orbital elements + swisstopo terrain, 24 LEO satellites, 24 h",
+            f"{post_src} + swisstopo terrain, 24 LEO satellites, 24 h",
         )
         main_figure(vis, res, set_key, fig_dir / "figure.png", sub, order)
     print(md[1][:3000])
@@ -187,8 +207,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="sat-iot-planner", description=__doc__)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("validate", help="check propagation against the published SGP4 verification set").set_defaults(fn=cmd_validate)
-    p = sub.add_parser("fetch-tle", help="download a CelesTrak group and store a dated, name-free snapshot")
+    p = sub.add_parser("fetch-tle", help="download a CelesTrak group into the local cache (name-free, dated)")
     p.add_argument("--group", default="active")
+    p.add_argument("--cache-dir", default=None, help="default: $SAT_IOT_CACHE_DIR or ./cache")
     p.set_defaults(fn=cmd_fetch_tle)
     sub.add_parser("fetch-terrain", help="rebuild horizon masks from swisstopo").set_defaults(fn=cmd_fetch_terrain)
     p = sub.add_parser("passes", help="list usable passes for one site")
@@ -198,6 +219,7 @@ def main(argv=None) -> int:
     p.add_argument("--days", type=float, default=1.0)
     p.add_argument("--limit", type=int, default=20)
     _add_link_args(p)
+    _add_data_args(p)
     p.set_defaults(fn=cmd_passes)
     p = sub.add_parser("schedule", help="write a JSON wake schedule for a device")
     p.add_argument("--site", required=True)
@@ -206,6 +228,7 @@ def main(argv=None) -> int:
     p.add_argument("--hours", type=float, default=48.0)
     p.add_argument("--out", default="schedule.json")
     _add_link_args(p)
+    _add_data_args(p)
     p.set_defaults(fn=cmd_schedule)
     p = sub.add_parser("demo", help="run every site x orbit set and write results and figures")
     p.add_argument("--days", type=float, default=7.0)
@@ -214,6 +237,7 @@ def main(argv=None) -> int:
     p.add_argument("--out", default="results")
     p.add_argument("--figures", default=None, help="directory for figures (default: same as --out)")
     _add_link_args(p)
+    _add_data_args(p)
     p.set_defaults(fn=cmd_demo)
     a = ap.parse_args(argv)
     return a.fn(a)
