@@ -84,4 +84,4 @@ Usable means: above the geometric horizon, link margin at least the design margi
 
 ## Licence
 
-MIT, Copyright (c) 2026 Victor Bonilla.
+MIT, Copyright (c) 2026 VB-Builds.
