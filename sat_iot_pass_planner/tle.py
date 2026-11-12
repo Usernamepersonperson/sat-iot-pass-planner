@@ -23,7 +23,7 @@ DATA_DIR = Path(__file__).parent / "data"
 MU_KM3_S2 = 398600.4418
 R_EQ_KM = 6378.137
 CELESTRAK_URL = "https://celestrak.org/NORAD/elements/gp.php?GROUP={group}&FORMAT=tle"
-USER_AGENT = "sat-iot-pass-planner/0.1 (open-source pass planner; +https://github.com/Usernamepersonperson/sat-iot-pass-planner)"
+USER_AGENT = "sat-iot-pass-planner/0.1 (open-source pass planner; +https://github.com/VB-Builds/sat-iot-pass-planner)"
 # CelesTrak asks clients not to download the same group more than once per update cycle (about 2 hours).
 MIN_REFETCH_S = 2 * 3600
 CACHE_ENV = "SAT_IOT_CACHE_DIR"
